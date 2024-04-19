@@ -7,7 +7,7 @@ with open('config.json') as f:
 userPath =config['userPath']
 def currentUser():
     file_path = userPath
-    file_name = "/currentuser.json"
+    file_name = "currentuser.json"
     completePath = os.path.join(file_path, file_name)
     f= open(completePath, "w+")
     f.write('''
