@@ -1,6 +1,3 @@
 {
-    "comment1": "You can place the main folder(Project1 with its contents)where ever you want to",
-    "comment2": "replace the userPath, moneyPath, invPath, with the location where you put the project",
-    "comment3": "Leave the config file in Project1 folder!",
     "userPath": "/Users/rolis/Desktop/"
 }
