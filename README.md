@@ -5,8 +5,9 @@ In terminal:
 git clone https://github.com/Rolissk/rolis-casino
 ```
 2. ```cd rolis-casino```
-2. Check your folder path using ```pwd``` and paste that in **config.json**
-3. Run the app using ```python3 main.py```
+3. Check your folder path using ```pwd```, copy the path.
+4. ```open config.json``` and paste the path.
+5. Run the app using ```python3 main.py```
 
 # About this project
 
