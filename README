@@ -1,1 +1,12 @@
-before launching main.py, you MUST replace path to Project1 in the config.json which is stored in main folder
+This is my first project after like 2 months of learning, so dont expect epic MLG gaming.
+
+Before launching main.py, you MUST replace path to Project1 in the config.json which is stored in main folder.
+
+You can use the log in (name: q, pass: qq) or register and make your own account, it wont have unlimited money tho,
+new users get 100 money.
+
+Project1 includes a functioning register and log in function, multiple simple games which all cost 5 money to play once
+and if you win, you obviously get money. With the money you earn you can purchase items in shop which will appear in your inventory 
+or use the cash out function and imagine that you get the money.
+
+All your data gets stored locally on your computer after you quit the game, once you reopen it, just log in and continue gabling!
