@@ -1,11 +1,12 @@
 # Setup
+In terminal:
 1. Clone this repository
 ```
 git clone https://github.com/Rolissk/rolis-casino
 ```
-2. cd rolis-casino
-2. Check your folder path using pwd and paste that in config.json
-3. Run the app using python3 main.py
+2. ```cd rolis-casino```
+2. Check your folder path using ```pwd``` and paste that in **config.json**
+3. Run the app using ```python3 main.py```
 
 # About this project
 
