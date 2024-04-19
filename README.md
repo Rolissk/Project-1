@@ -7,9 +7,9 @@ git clone https://github.com/Rolissk/rolis-casino
 2. Check your folder path using pwd and paste that in config.json
 3. Run the app using python3 main.py
 
-This is my first project after like 2 months of learning, so dont expect epic MLG gaming.
+# About this project
 
-Before launching main.py, you MUST replace path to Project1 in the config.json which is stored in main folder.
+This is my first project after like 2 months of learning, so dont expect epic MLG gaming.
 
 You can use the log in (name: q, pass: qq) or register and make your own account, it wont have unlimited money tho,
 new users get 100 money.
