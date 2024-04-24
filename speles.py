@@ -20,7 +20,7 @@ def secretNumber():
                 break
 
         if secretNumb == guess:
-            print('Congrats, you guessed it in ' +str(guessesTaken) +' guesses and you\'ve earned 10 points!')
+            print('Congrats, you guessed it in ' +str(guessesTaken) +' guesses!')
             addMoney(int(betSize) * 2)
         else:
             print('The number i was thinking of was ' +str(secretNumb) +'!')
