@@ -10,7 +10,7 @@ def cashOut():
     print('---------')
     while True:
         from ieklusana import userName
-        balCheck = userPath + "userLog/" + userName+'.json'
+        balCheck = userPath + "/userLog/" + userName+'.json'
         with open(balCheck) as data:
             money = json.load(data)
             data.close()
@@ -26,7 +26,7 @@ def cashOut():
                 moneyData = json.load(money)
                 money.close()
                 moneyData['credits'] -= int(moneyOut)
-                pathOut = userPath + "userLog/" +str(userName)+".json"
+                pathOut = userPath + "/userLog/" +str(userName)+".json"
                 with open(pathOut, 'w') as outfile:
                     json.dump(moneyData, outfile,indent=4)
                     break
@@ -38,7 +38,7 @@ def shopMenu():
     if shopIzvele == 'p':
         while True:
             from ieklusana import userName
-            shop = userPath + "userLog/shopItems.json"
+            shop = userPath + "/userLog/shopItems.json"
             with open(shop) as data:
                 shopItems = json.load(data)
                 data.close()
@@ -104,7 +104,7 @@ def shopMenu():
 
 def moneyCheck(ammount):
     from ieklusana import userName
-    balCheck = userPath + "userLog/" + userName+'.json'
+    balCheck = userPath + "/userLog/" + userName+'.json'
     with open(balCheck) as data:
         money = json.load(data)
         data.close()
@@ -114,7 +114,7 @@ def moneyCheck(ammount):
         else:
             noBal = 'in'
 def stockCheck(item):
-    shop = userPath + "userLog/shopItems.json"
+    shop = userPath + "/userLog/shopItems.json"
     with open(shop) as data:
         shopItems = json.load(data)
         data.close()
@@ -128,7 +128,7 @@ def stockCheck(item):
 def buyingPick():
     from ieklusana import userName
     global koPirkt
-    path = userPath + "userLog/" +str(userName)+"Inv.json"
+    path = userPath + "/userLog/" +str(userName)+"Inv.json"
     with open(path) as inventoryFile:
         inventAdd = json.load(inventoryFile)
         if koPirkt not in inventAdd:
@@ -139,7 +139,7 @@ def buyingPick():
             inventAdd[koPirkt] += count
         with open(path, 'w') as outfile:
             json.dump(inventAdd, outfile,indent=4)
-            shop = userPath + "userLog/shopItems.json"
+            shop = userPath + "/userLog/shopItems.json"
             with open(shop) as data:
                 shopItems = json.load(data)
                 data.close()
@@ -149,7 +149,7 @@ def buyingPick():
 def inventory():
     print('---------\nInventory:')
     from ieklusana import userName
-    invPath = userPath + "userLog/"+str(userName)+"Inv.json"
+    invPath = userPath + "/userLog/"+str(userName)+"Inv.json"
     with open(invPath) as inv:
                 invItems = json.load(inv)
                 inv.close()
@@ -159,23 +159,23 @@ def inventory():
 
 def addMoney(ammount):
     from ieklusana import userName
-    path = userPath + "userLog/" +str(userName)+".json"
+    path = userPath + "/userLog/" +str(userName)+".json"
     with open(path) as money:
         moneyData = json.load(money)
         money.close()
         moneyData['credits'] += int(ammount)
-        pathOut = userPath + "userLog/" +str(userName)+".json"
+        pathOut = userPath + "/userLog/" +str(userName)+".json"
         with open(pathOut, 'w') as outfile:
             json.dump(moneyData, outfile,indent=4, )
         
     
 def takeMoney(ammount):
     from ieklusana import userName
-    path = userPath + "userLog/" +str(userName)+".json"
+    path = userPath + "/userLog/" +str(userName)+".json"
     with open(path) as money:
         moneyData = json.load(money)
         money.close()
         moneyData['credits'] -= int(ammount)
-        pathOut = userPath + "userLog/" +str(userName)+".json"
+        pathOut = userPath + "/userLog/" +str(userName)+".json"
         with open(pathOut, 'w') as outfile:
             json.dump(moneyData, outfile,indent=4, )
