@@ -3,7 +3,8 @@ from naudasShit import addMoney, takeMoney
 def secretNumber():
     print('Hello to he secret number game!\nYou will have 6 attempts to guess the number!')
     while True:
-        takeMoney(5)
+        betSize = input("How much do you want to bet?")
+        takeMoney(betSize)
         secretNumb = random.randint(1,30)
         print('Im thinking of  anumber between 1 and 30')
 
@@ -20,7 +21,7 @@ def secretNumber():
 
         if secretNumb == guess:
             print('Congrats, you guessed it in ' +str(guessesTaken) +' guesses and you\'ve earned 10 points!')
-            addMoney(10)
+            addMoney(int(betSize) * 2)
         else:
             print('The number i was thinking of was ' +str(secretNumb) +'!')
         snizvele = input('If you\'d like to play again, type (a) or press enter to quit!')
@@ -32,7 +33,8 @@ def secretNumber():
 def rockPaperScissors():
     print('ROCK, PAPER, SCISSORS')
     while True:
-        takeMoney(5)
+        betSize = input("How much do you want to bet?")
+        takeMoney(betSize)
         while True:
             print('Your turn: (r)ock (p)aper (s)cissors')
             plMove = input()
@@ -60,16 +62,16 @@ def rockPaperScissors():
         
         if plMove == comMove:
             print('Its a Tie, you get your money back!')
-            addMoney(5)
+            addMoney(int(betSize))
         elif plMove == 'r' and comMove == 's':
             print('You win!')
-            addMoney(10)
+            addMoney(int(betSize) * 2)
         elif plMove == 'p' and comMove == 'r':
             print('You win!')
-            addMoney(10)
+            addMoney(int(betSize) * 2)
         elif plMove == 's' and comMove == 'p':
             print('You win!')
-            addMoney(10)
+            addMoney(int(betSize) * 2)
         elif plMove == 'r' and comMove == 'p':
             print('You lose')
         elif plMove == 'p' and comMove == 's':
@@ -85,7 +87,8 @@ def rockPaperScissors():
 
 def coinFlip():
     while True:
-        takeMoney(5)
+        betSize = input("How much do you want to bet?")
+        takeMoney(betSize)
         coinPick = input('Pick your side of the coin: (h)eads or (t)ails!')
         if coinPick == 'h':
             print('You call heads!')
@@ -96,7 +99,7 @@ def coinFlip():
             coinRng = 'h'
             print('Coin has landed on the head!')
             if coinPick == coinRng:
-                addMoney(10)
+                addMoney(int(betSize) * 2)
                 print('You win!')
             else:
                 print('You lose!')
@@ -104,7 +107,7 @@ def coinFlip():
             coinRng = 't'
             print('Coin has landed on the tails!')
             if coinPick == coinRng:
-                addMoney(10)
+                addMoney(int(betSize) * 2)
                 print('You win!')
             else:
                 print('You lose!')
@@ -121,7 +124,8 @@ def spinWheel():
         print('If you want to play, type (spin), press enter to quit')
         atbilde = input()
         if atbilde == 'spin':
-            takeMoney(5)
+            betSize = input("How much do you want to bet?")
+            takeMoney(betSize)
             print('Spinning the wheel!\n')
             pirmais = random.randint(1,5)
             print('1st number is ' + str(pirmais))
@@ -133,10 +137,10 @@ def spinWheel():
             break
         if pirmais == otrais and pirmais == tresais and otrais == tresais:
             print('JACKPOT!')
-            addMoney(20)
+            addMoney(int(betSize) * 4)
         elif pirmais == otrais or pirmais == tresais or otrais == tresais:
             print('You won a small prize!')
-            addMoney(10)
+            addMoney(int(betSize) * 2)
         else:
             print('You lost!')
 
@@ -238,14 +242,15 @@ def blackjack():
             break
         elif speletVaiNe == 'y':
             while True:
-                takeMoney(5)
+                betSize = input("How much do you want to bet?")
+                takeMoney(betSize)
                 print('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
                 firstDlCard()
                 time.sleep(0.3)
                 firstPlCard()
                 if plHandVal == 21:
                     print('You Win')
-                    addMoney(10)
+                    addMoney(int(betSize) * 2)
                     break
                 else:
                     PlChoice()
@@ -259,17 +264,17 @@ def blackjack():
                         break
                 if plHandVal > dlHandVal:
                     print('You Win')
-                    addMoney(10)
+                    addMoney(int(betSize) * 2)
                     break
                 elif dlHandVal > 21:
                     print('You win')
-                    addMoney(10)
+                    addMoney(int(betSize) * 2)
                     break
                 elif plHandVal < dlHandVal:
                     print('You lose')
                     break
                 else:
                     print('It is a tie')
-                    addMoney(5)
+                    addMoney(int(betSize) * 2)
                     break
             
